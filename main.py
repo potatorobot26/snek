@@ -92,6 +92,18 @@ while program[pc] != "HALT":
         a = stack.pop()
         b = stack.pop()
         stack.push(a+b)
+
+    elif opcode == "MULTIPLY":
+        a = stack.pop()
+        b = stack.pop()
+        print(a*b)
+
+    elif opcode == "MULTIPLY_3NUMS":
+        a = stack.pop()
+        b = stack.pop()
+        c = stack.pop()
+        print(a*b*c)
+
     elif opcode == "SUB":
         a = stack.pop()
         b = stack.pop()
