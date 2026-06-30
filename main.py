@@ -68,6 +68,11 @@ class Stack:
         self.sp -= 1
         return number
     
+    def print_pop(self):
+        number = self.pop()
+        print(number)
+        return number
+    
     def top(self):
         return self.buf[self.sp]
     
@@ -135,3 +140,5 @@ while program[pc] != "HALT":
             pc = label_tracker[program[pc]]
         else:
             pc += 1
+    elif opcode == "POP_PRINT":
+        stack.print_pop()
