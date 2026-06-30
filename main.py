@@ -104,6 +104,10 @@ while program[pc] != "HALT":
         c = stack.pop()
         print(a*b*c)
 
+    elif opcode == "MIRROR":
+        mirrored = stack.pop()
+        print(mirrored)
+
     elif opcode == "SUB":
         a = stack.pop()
         b = stack.pop()
